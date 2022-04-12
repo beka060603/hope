@@ -14,17 +14,16 @@ class Jack(Person):
 
 
 h = Jack('jack', 'd', 'd', 1000)
-k = h.balance
 
 
 class Vito(Jack):
-    _balance = 100
+    __balance = 100
 
     def __init__(self, phone_number, first_name, last_name, balance):
         super().__init__(phone_number, first_name, last_name, balance)
 
     def minus(self):
-        o = h.balance - self._balance
+        o = h.balance - self.__balance
         var = self.balance + o
         print(var)
 
