@@ -1,4 +1,4 @@
-# здесь я @ искала
+# здесь я @ искал
 import re
 
 file_path = "MOCK_DATA.txt"
