@@ -3,17 +3,6 @@ movies = {
     "Spider-Man": {}
 }
 
-
-# def show():
-#     for name, rates in movies.items():
-#         movies = {
-#     "Django Unchained": {
-#         "John": 10,
-#         "Jack": 9
-#     },
-#      "Spider-Man": {}
-# }
-
 def show():
     for name, rates in movies.items():
         print(f"\nMovie - {name}")
@@ -58,19 +47,18 @@ def rate_view():
 
 while True:
     show()
-    command = int(input("\nEnter command(1 - add film, 2 - add rate, 3 - view rates, 0 - finish programm): "))
+    command = input("\nEnter command(1 - add film, 2 - add rate, 3 - view rates, 0 - finish programm): ")
 
-    if command == 0:
+    if command == '0':
         print("Programm is finish!")
         break
-
-    elif command == 1:
+    elif command == '1':
         movie = input("Enter movie:")
         add_movie(movie)
-    elif command == 2:
+    elif command == '2':
         movie = input("Enter movie for add rate: ")
         add_rete(movie)
-    elif command == 3:
+    elif command == '3':
         rate_view()
     else:
         print("Command doesn't exist!")
