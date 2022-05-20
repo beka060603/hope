@@ -18,7 +18,8 @@ def add_movie(movie):
     if movie in movies.keys():
         print("This movie already exist!")
     else:
-        movies.update({movie: dict()})
+        movies.update({movie.capitalize(): dict()})
+        print('\n\nMovie added successfity\n\n')
 
 
 def add_rete(movie):
@@ -31,7 +32,7 @@ def add_rete(movie):
             print("Rate must be 1-10!")
         else:
             movies[movie].update({name: rate})
-            print(f"A rating has been added for Interstellar: {name} rated it {rate}")
+            print(f"A rating has been added for {movie}: {name} rated it {rate}")
 
 
 def rate_view():
@@ -42,7 +43,7 @@ def rate_view():
         if len(rates) == 0:
             print(f"Rating is not yet available for {movie}")
         else:
-            print(sum(rates) / len(rates))
+            print(sum(rates) / len(rates),movie)
 
 
 while True:

@@ -1,5 +1,5 @@
 # Создать список ten, состоящий из целых чисел от одного до десяти
-ten = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ten = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,0,0,0,0,6,6,6,0]
 print(ten)
 # Создать список evens, который состоит из четных чисел списка ten
 evens = list(filter(lambda x: x % 2 == 0, ten))
@@ -17,17 +17,17 @@ print(events)
 
 
 
-def ten1(lst):
+def sdfghjk(word=ten):
     while 1:
         try:
             number = input("введите индекс: ")
             if number == 'stop':
                 break
             else:
-                print(lst[int(number)])
+                print(word[int(number)])
         except Exception:
-            print(f"индекс: от 0 до {len(lst) - 1}")
+            print(f"индекс: от 0 до {len(word)-1}")
 
 
-ten1(ten)
+sdfghjk(ten)
 
