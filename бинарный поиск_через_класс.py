@@ -8,6 +8,7 @@ def get_list() -> list:
 """
 
 
+
 class Solution:
 
     def find_target(self, list, target):

@@ -14,3 +14,4 @@ while True:
         left = current
     else:
         right = current
+
