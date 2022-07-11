@@ -1,4 +1,3 @@
-
 stage = {
     'kz': {"blue", 'yellow', 'red'},
     'japan': {'red', 'white'},

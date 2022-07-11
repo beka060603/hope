@@ -1,25 +1,22 @@
 import random
 
-list = ["камень", "ножницы", "бумага"]
-
+lst = ['камень', 'ножницы', 'бумага']
 while True:
-    player = input("Выбери: камень, ножницы, бумага")
-    bot = random.choice(list)
-
-    if player.lower() =='выход':
-        print('Игра завершена!')
+    play = input('Введите (камень, ножницы, бумага):').lower()
+    bot = random.choice(lst)
+    if play == 'выход':
+        print('Пргогрмма завершена')
         break
+    if play == bot:
+        print(f'bot choosed - {bot}\n You winned-{play}\n ничья')
 
-    if player == bot:
-        print(f'Бот выбрал {bot}\n Вы выбрали {player}\n Ничья!')
+    elif (bot == 'камень' and play == 'ножницы') or (bot == 'ножницы' and play == 'бумага') or (
+            bot == 'бумага' and play == 'камень'):
+        print(f'bot choosed - {bot}\n You выбрали-{play}\n Бот выиграл')
 
-    elif (bot == 'камень' and player == 'ножницы') or (bot == 'ножницы' and player == 'бумагу') or (bot == "бумага" and player == 'камень'):
-        print(f'Бот выбрал {bot}\n Вы выбрали {player}\n Бот выиграл!')
+    elif (bot == 'бумага' and play == 'ножницы') or (bot == 'камень' and play == 'бумага') or (
+            bot == 'ножницы' and play == 'камень'):
+        print(f'bot choosed - {bot}\n You выбрали-{play}\n Вы выиграл')
 
-    elif (player == 'камень' and bot == 'ножницы') or (player == 'ножницы' and bot == 'бумага') or (player == 'бумага' and bot == 'камень'):
-        print()
-        
-
-
-
-
+    else:
+        print("Неправильная команда")
