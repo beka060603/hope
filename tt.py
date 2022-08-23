@@ -1,20 +1,26 @@
-name=input('введи имя: ')
-lasName=input('введи фамилию :')
-password=input('введите пароль: ')
-def test(password):
-    if len(password) > 8:
-        if password.isdigit():
-            print('пароль должен быть с буквами и цифрами')
-        elif password.isalpha():
-            print('пароль должен состоять из цифр и букв')
+import random
+
+count = 0
+
+tries = int(input('Ведите количество попыток '))
+
+while count != tries:
+    a = random.randint(1, 9)
+    b = random.randint(1, 9)
+    product = a * b
+    try:
+        answer = int(input(f'{a} * {b} = '))
+        count += 1
+
+        if answer != product:
+            print(f'false! Ответ -{product}')
         else:
-            print(password)
-    else:
-        print('пароль должен быть больше 8 символов')
+            print(f'true! Ответ - {product}')
 
+        if tries != count:
+            print(f'Количество оставшихся попыток - {tries - count}')
 
-test(password)
-print('ваше имя:',name)
-print('ваша фамилия:', lasName)
-print('ваш пароль:',password)
-print('данные сохранены')
+    except ValueError:
+        print('Вводите только числа!!')
+
+print("Игра окончена! Спасибо за игру <3")
