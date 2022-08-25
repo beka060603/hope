@@ -8,11 +8,10 @@ with open('results.txt', 'w', encoding='UTF-8') as file:
     while True:
         print(f"Загаданное вами число равно {middle}?")
         file.write(f"{middle},")
-        otvet = input()
+        otvet = input(': ')
         i += 1
         if otvet == '>':
             left = middle
-
             middle = (left + right) // 2
         elif otvet == '<':
             right = middle
